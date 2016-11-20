@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Forum2016
+namespace Antibiooti.Forum2016
 {
     public class Program
     {
@@ -14,7 +14,7 @@ namespace Forum2016
                 screen.Write(20, 13, "      * * *         * * *        * * *         * * *  ");
                 screen.Write(20, 14, "    *   *   *     *   *   *    *   *   *     *   *   *");
                 Console.ReadKey(true);
-            }            
+            }
         }
     }
 }
