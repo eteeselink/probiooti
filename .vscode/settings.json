@@ -1,0 +1,10 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    //disabling because it errors in current VS code and, 
+    //well, it's just noise in a project as small as this.
+    "editor.codeLens": false,
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true
+    }
+}
