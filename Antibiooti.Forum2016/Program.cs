@@ -8,11 +8,11 @@ namespace Antibiooti.Forum2016
         {
             using(var screen = new Screen()) {
                 screen.Clear();
-                screen.Write(20, 10, "    *   *   *     *   *   *    *   *   *     *   *   *");
-                screen.Write(20, 11, "      * * *         * * *        * * *         * * *  ");
-                screen.Write(20, 12, "    * * * * *     * * * * *    * * * * *     * * * * *");
-                screen.Write(20, 13, "      * * *         * * *        * * *         * * *  ");
-                screen.Write(20, 14, "    *   *   *     *   *   *    *   *   *     *   *   *");
+                screen.Write(10, 10, "*   *   *     *   *   *    *   *   *     *   *   *     *   *   *");
+                screen.Write(10, 11, "  * * *         * * *        * * *         * * *         * * *  ");
+                screen.Write(10, 12, "* * * * *     * * * * *    * * * * *     * * * * *     * * * * *");
+                screen.Write(10, 13, "  * * *         * * *        * * *         * * *         * * *  ");
+                screen.Write(10, 14, "*   *   *     *   *   *    *   *   *     *   *   *     *   *   *");
                 Console.ReadKey(true);
             }
         }

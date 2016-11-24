@@ -2,7 +2,7 @@ using System;
 
 namespace Antibiooti.Forum2016
 {
-    class Screen : IDisposable
+    class Screen : IScreen, IDisposable
     {
         public void Write(int x, int y, string text, ConsoleColor color = ConsoleColor.White)
         {
