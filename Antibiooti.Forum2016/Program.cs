@@ -6,6 +6,8 @@ namespace Antibiooti.Forum2016
     {
         public static void Main(string[] args)
         {
+            MovieMaker mm = new MovieMaker(args);
+            mm.buildScreenTemplates();
             using(var screen = new Screen()) {
                 screen.Clear();
                 screen.Write(10, 10, "*   *   *     *   *   *    *   *   *     *   *   *     *   *   *");
