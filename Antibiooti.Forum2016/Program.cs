@@ -6,7 +6,7 @@ namespace Antibiooti.Forum2016
     {
         public static void Main(string[] args)
         {
-
+            IScreen screen = new Screen();
            // MovieMaker mm = new MovieMaker(args);
             //mm.buildScreenTemplates();
 
@@ -47,7 +47,9 @@ namespace Antibiooti.Forum2016
                if(characterTextLength != 5)
                {
                    Console.WriteLine("Character String should be 5 characters long");
-               }              
+               }            
+               IText text = new Text();
+               text.WriteText(ssizes[1],null,screen); 
             }
             else if (ssizes[0].Equals("M")) 
             {
