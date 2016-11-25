@@ -60,7 +60,7 @@ namespace Antibiooti.Forum2016
                  Console.WriteLine("Color: " + color);
                }       */    
                IText text = new Text();
-               text.WriteText(userInputArgs[1],null,screen); 
+               text.WriteText(userInputArgs[1],colorList,screen); 
 
             }
             else if (userInputArgs[0].Equals("M")) 
