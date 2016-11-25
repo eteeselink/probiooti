@@ -40,9 +40,17 @@ namespace Antibiooti.Forum2016
                         Console.Write("The characters must be one of these: \\, /, O, o. . ");
                     } else {
                         Character c = new Character();
-                        if (text[0] == a) {
-                        c.WriteCharacter(10, 10, a, ConsoleColor.Red, screen);
-                        }
+                        // if (text[0] == a) {
+                        c.WriteCharacter(20, 10, text[0], ConsoleColor.Red, screen);
+                        Character c1 = new Character();
+                        c1.WriteCharacter(20, 20, text[1], ConsoleColor.Red, screen);
+
+                        Character c2 = new Character();
+                        c2.WriteCharacter(20, 33,text[2], ConsoleColor.Red, screen);
+                        Character c3 = new Character();
+                        c3.WriteCharacter(20, 44, text[3], ConsoleColor.Red, screen);
+                        Character c4 = new Character();
+                        c4.WriteCharacter(20, 55, text[4], ConsoleColor.Red, screen);
                     }
 
                 }       
