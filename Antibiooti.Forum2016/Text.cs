@@ -1,10 +1,17 @@
 using System;
 using System.Collections.Generic;
 
-namespace probiooti.Antibiooti.Forum2016
+namespace Antibiooti.Forum2016
 {
     public class Text: IText
     {
+        public enum EColors
+        {
+            Red = ConsoleColor.Red,
+            Green = ConsoleColor.Green,
+            Blue = ConsoleColor.Blue
+        }
+
         enum CharsExpected
         {
             SlashLeft = '\\',
@@ -14,11 +21,31 @@ namespace probiooti.Antibiooti.Forum2016
             Dot = '.'
         }
 
-        public void WriteText(string text, int color , List<int> colors){
-            foreach(char a in text){
-                
+        public void WriteText(string text, string color , List<int> colors){
+            using(var screen = new Screen()) {
+                screen.Clear();
+                // screen.Write(10, 10, "*   *   *     *   *   *    *   *   *     *   *   *     *   *   *");
+                // screen.Write(10, 11, "  * * *         * * *        * * *         * * *         * * *  ");
+                // screen.Write(10, 12, "* * * * *     * * * * *    * * * * *     * * * * *     * * * * *");
+                // screen.Write(10, 13, "  * * *         * * *        * * *         * * *         * * *  ");
+                // screen.Write(10, 14, "*   *   *     *   *   *    *   *   *     *   *   *     *   *   *");
+          
+                foreach(char a in text){
+               
+                    if(!Enum.IsDefined(typeof(CharsExpected), a)) {
+                        Console.Write("The characters must be one of these: \\, /, O, o. . ");
+                    } else {
+                        Character c = new Character();
+                        if (text[0] == a) {
+                        c.WriteCharacter(10, 10, a, ConsoleColor.Red, screen);
+                        }
+                    }
+
+                }       
+              
+            //   Console.ReadKey(true);
             }
 
-        }
     }
+}
 }
