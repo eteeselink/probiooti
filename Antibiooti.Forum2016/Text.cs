@@ -39,7 +39,7 @@ namespace Antibiooti.Forum2016
                 foreach(char a in text){
                
                     if(!CharsOk.Contains(a.ToString())) {
-                        Console.Write("The characters must be one of these: \\, /, O, o. . ");
+                        Console.Write("The characters must be one of these: x,\\, /, O, o. . ");
                     } 
                 }
                         Character c = new Character();
