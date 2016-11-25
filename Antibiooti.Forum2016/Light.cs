@@ -40,7 +40,7 @@ namespace Antibiooti.Forum2016
             }
         }
 
-        public string getChar(){
+        public char getChar(){
             if(_status) {
                 return '*';
             }
