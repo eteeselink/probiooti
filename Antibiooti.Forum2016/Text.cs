@@ -32,6 +32,8 @@ namespace Antibiooti.Forum2016
                 // screen.Write(10, 13, "  * * *         * * *        * * *         * * *         * * *  ");
                 // screen.Write(10, 14, "*   *   *     *   *   *    *   *   *     *   *   *     *   *   *");
           
+                // if(colo)
+                // foreach(string s incolor)
                 foreach(char a in text){
                
                     if(!CharsOk.Contains(a.ToString())) {
