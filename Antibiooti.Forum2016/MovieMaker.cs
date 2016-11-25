@@ -8,6 +8,7 @@ namespace Antibiooti.Forum2016
         private String[] allLines;
         public MovieMaker(string[] args){
                     string fileName = args[1];
+                    Console.WriteLine("File Name: " + fileName);
                     try{
                       allLines = File.ReadAllLines(fileName); 
                     } catch (Exception e) {
