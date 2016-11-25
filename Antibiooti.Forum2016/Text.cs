@@ -25,10 +25,10 @@ namespace Antibiooti.Forum2016
         public void WriteText(string text, List<string> color , IScreen screen){
 
             ConsoleColor color1 = ConsoleColor.Red;
-            ConsoleColor color2 = ConsoleColor.Red;
-            ConsoleColor color3 = ConsoleColor.Red;
-            ConsoleColor color4 = ConsoleColor.Red;
-            ConsoleColor color5 = ConsoleColor.Red;
+            ConsoleColor color2 = ConsoleColor.Yellow;
+            ConsoleColor color3 = ConsoleColor.Green;
+            ConsoleColor color4 = ConsoleColor.Blue;
+            ConsoleColor color5 = ConsoleColor.White;
 
             if(color!=null && color.Count > 0) {
                 foreach(string s in color) {
