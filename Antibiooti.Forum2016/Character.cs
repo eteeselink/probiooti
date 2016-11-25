@@ -5,7 +5,7 @@ namespace Character
     class Character
     {
         //TODO sort the package structure
-        private Pixel[,] buffer;
+        private Light[15] lights;
 
         public FakeScreen() {
             Clear();
