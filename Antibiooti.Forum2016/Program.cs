@@ -24,7 +24,12 @@ namespace Antibiooti.Forum2016
             string line;
            // string commandName;  
 
-            Console.WriteLine("Enter command (T/M), characters, color and Press Enter:");
+            Console.WriteLine("Syntax for commandline can be one of the two");
+            Console.WriteLine("1. <T>,<5-character string>,<5-color strings(one per light)");
+            Console.WriteLine("2. <M>,<FilePath>");
+            Console.WriteLine("For example");
+            Console.WriteLine("T,0o.0o,blue,red,green,blue,red");
+            Console.WriteLine("M,D:\\Continuous Integration\\movie.txt");
             line = Console.ReadLine();
 
             char[] whitespace = new char[] {','};
