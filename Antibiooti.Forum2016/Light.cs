@@ -40,6 +40,14 @@ namespace Antibiooti.Forum2016
             }
         }
 
+        public char getChar(){
+            if(_status) {
+                return '*';
+            }
+            else {
+                return ' ';
+            }
+        }
 
         /// <summary>
         /// Initializes a new instance of the Light class.

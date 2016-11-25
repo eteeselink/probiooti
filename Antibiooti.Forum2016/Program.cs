@@ -6,7 +6,12 @@ namespace Antibiooti.Forum2016
     {
         public static void Main(string[] args)
         {
+
+            MovieMaker mm = new MovieMaker(args);
+            mm.buildScreenTemplates();
+
           /*  using(var screen = new Screen()) {
+            using(var screen = new Screen()) {
                 screen.Clear();
                 screen.Write(10, 10, "*   *   *     *   *   *    *   *   *     *   *   *     *   *   *");
                 screen.Write(10, 11, "  * * *         * * *        * * *         * * *         * * *  ");
@@ -22,15 +27,10 @@ namespace Antibiooti.Forum2016
             Console.WriteLine("Enter command (T/M), characters, color and Press Enter:");
             line = Console.ReadLine();
             commandName=line.Substring(0, 1).Trim();
-           if(commandName=="T")
-            {
-               // var TextCommand= new Command();
-                Console.WriteLine("Text");
-            };
-
-     
-    
-                   
+            Command cmd=new Command(commandName);
+            
+            
+            ;
         }
     }
 }
