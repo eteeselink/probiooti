@@ -32,7 +32,7 @@ namespace Antibiooti.Forum2016
 
             if(color!=null && color.Count > 0) {
                 foreach(string s in color) {
-                    
+                    // s.
                 }
             }
             
