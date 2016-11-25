@@ -59,15 +59,18 @@ namespace Antibiooti.Forum2016
                         Console.ResetColor();
             }
 
-        ConsoleColor assignColor(String s) {
-            if (s.Equals("Red", StringComparison.CurrentCultureIgnoreCase)) {
+        ConsoleColor assignColor(String s)
+        {
+            if (s.Equals("Red", StringComparison.CurrentCultureIgnoreCase))
                 return ConsoleColor.Red;
-            } else if (s.Equals("Green", StringComparison.CurrentCultureIgnoreCase)) {
-               return ConsoleColor.Green; 
-            } else if (s.ToLower() == "blue") {
-               return ConsoleColor.Blue; 
-            }
-            return ConsoleColor.Red;
+            else if (s.Equals("Green", StringComparison.CurrentCultureIgnoreCase))
+                return ConsoleColor.Green;
+            else if (s.ToLower() == "blue")
+                return ConsoleColor.Blue;
+            else if (s.ToLower() == "yellow")
+                return ConsoleColor.Yellow;
+            else
+                return ConsoleColor.Red;
         }
 
     }
