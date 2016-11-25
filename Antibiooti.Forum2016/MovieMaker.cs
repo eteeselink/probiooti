@@ -9,7 +9,7 @@ namespace Antibiooti.Forum2016
         public MovieMaker(string[] args){
                     string fileName = args[1];
                     try{
-                      allLines = File.ReadAllLines("Antibiooti.Forum2016/"+fileName); 
+                      allLines = File.ReadAllLines(fileName); 
                     } catch (Exception e) {
                         Console.WriteLine("Unable to read file",e);
                     }
