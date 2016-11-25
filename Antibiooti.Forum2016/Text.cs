@@ -30,9 +30,25 @@ namespace Antibiooti.Forum2016
             ConsoleColor color4 = ConsoleColor.Blue;
             ConsoleColor color5 = ConsoleColor.White;
 
+            if(color==null) {
+                Console.Write("Color is null" );
+            }
             if(color!=null && color.Count > 0) {
-                foreach(string s in color) {
-                    // s.
+                Console.Write(color.Count);
+                for(int b=0; b<color.Count; b++) {
+                    if(b==0) {
+                        Console.Write("Color read:" + color[b]);
+                        assignColor(color1, color[b]);
+                        Console.Write("Color assignColor:" + color1);
+                    } else if (b==1) {
+                        assignColor(color2, color[b]);
+                    } else if (b==2) {
+                        assignColor(color3, color[b]);
+                    } else if (b==3) {
+                        assignColor(color4, color[b]);
+                    } else if (b==4) {
+                        assignColor(color5, color[b]);
+                    }
                 }
             }
             
@@ -43,6 +59,7 @@ namespace Antibiooti.Forum2016
                     } 
                 }
                         Character c = new Character();
+                        Console.Write(color1);
                         c.WriteCharacter(20, 10, text[0], color1, screen);
                         Character c1 = new Character();
                         c1.WriteCharacter(20, 24, text[1], color2, screen);
@@ -56,5 +73,17 @@ namespace Antibiooti.Forum2016
             //   Console.ReadKey(true);
             }
 
+        ConsoleColor assignColor(ConsoleColor c, String s) {
+            if (s.Equals("Red", StringComparison.CurrentCultureIgnoreCase)) {
+                c = ConsoleColor.Red;
+            } else if (s.Equals("Green", StringComparison.CurrentCultureIgnoreCase)) {
+               c = ConsoleColor.Green; 
+            } else if (s.ToLower().Equals("blue")) {
+               c = ConsoleColor.Blue; 
+            }
+            return c;
+        }
+
     }
+
 }
