@@ -20,7 +20,7 @@ namespace Antibiooti.Forum2016
             SmallO = 'o',
             Dot = '.'
         }
-        const string CharsOk = "x\\/Oo.";
+        const string CharsOk = "|x\\/Oo.";
 
         public void WriteText(string text, List<string> color , IScreen screen){
 
@@ -55,7 +55,7 @@ namespace Antibiooti.Forum2016
                 foreach(char a in text){
                
                     if(!CharsOk.Contains(a.ToString())) {
-                        Console.Write("The characters must be one of these: x,\\, /, O, o. . ");
+                        Console.Write("The characters must be one of these: |,x,\\, /, O, o. . ");
                     } 
                 }
                         Character c = new Character();
@@ -80,7 +80,7 @@ namespace Antibiooti.Forum2016
                 c = ConsoleColor.Red;
             } else if (s.Equals("Green", StringComparison.CurrentCultureIgnoreCase)) {
                c = ConsoleColor.Green; 
-            } else if (s.ToLower().Equals("blue")) {
+            } else if (s.ToLower().Equals("Blue")) {
                c = ConsoleColor.Blue; 
             }
             return c;
