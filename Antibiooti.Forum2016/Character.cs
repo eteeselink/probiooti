@@ -46,12 +46,12 @@ namespace Antibiooti.Forum2016
         {
             // TODO FIX To display the character
             SetCharacter(c);
-            SetCharacterColor(col);
-            screen.Write(y, x, lights[0].getChar()+"   "+lights[1].getChar()+"   " + lights[2].getChar());
-            screen.Write(y, x+1, "  "+lights[3].getChar()+" "+lights[4].getChar()+" "+lights[5].getChar()+"  ");
-            screen.Write(y, x+2, lights[6].getChar()+" "+lights[7].getChar()+" "+lights[8].getChar()+" "+lights[9].getChar()+" "+lights[10].getChar());
-            screen.Write(y, x+3, "  "+lights[11].getChar()+" "+lights[12].getChar()+" "+lights[13].getChar()+"  ");
-            screen.Write(y, x+4, lights[14].getChar()+"   "+lights[15].getChar()+"   "+lights[16].getChar());
+            // SetCharacterColor(col);
+            screen.Write(y, x, lights[0].getChar()+"   "+lights[1].getChar()+"   " + lights[2].getChar(), col);
+            screen.Write(y, x+1, "  "+lights[3].getChar()+" "+lights[4].getChar()+" "+lights[5].getChar()+"  ", col);
+            screen.Write(y, x+2, lights[6].getChar()+" "+lights[7].getChar()+" "+lights[8].getChar()+" "+lights[9].getChar()+" "+lights[10].getChar(), col);
+            screen.Write(y, x+3, "  "+lights[11].getChar()+" "+lights[12].getChar()+" "+lights[13].getChar()+"  ", col);
+            screen.Write(y, x+4, lights[14].getChar()+"   "+lights[15].getChar()+"   "+lights[16].getChar(), col);
         }
 
         public void SetCharacter(char c)
@@ -103,6 +103,17 @@ namespace Antibiooti.Forum2016
                     lights[8].Status = true;
                     lights[11].Status = true;
                     lights[14].Status = true;
+                    break;
+                case 'x':
+                    lights[0].Status = true;
+                    lights[2].Status = true;
+                    lights[3].Status = true;
+                    lights[5].Status = true;
+                    lights[8].Status = true;
+                    lights[11].Status = true;
+                    lights[13].Status = true;
+                    lights[14].Status = true;
+                    lights[16].Status = true;
                     break;
                 default:
                     break;
