@@ -6,6 +6,6 @@ namespace Antibiooti.Forum2016
 {
     interface IText
     {
-        void WriteText(string text,  string color, ConsoleColor colors , IScreen screen); 
+        void WriteText(string text,  List<string> color, IScreen screen); 
     }
 }

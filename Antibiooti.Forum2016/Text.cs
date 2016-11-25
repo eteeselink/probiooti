@@ -22,7 +22,7 @@ namespace Antibiooti.Forum2016
         }
         const string CharsOk = "\\/Oo.";
 
-        public void WriteText(string text, string color , ConsoleColor colors, IScreen screen){
+        public void WriteText(string text, List<string> color , IScreen screen){
         //    var screen = new Screen();
         //var screen = new FakeScreen();
                 // screen.Clear();
