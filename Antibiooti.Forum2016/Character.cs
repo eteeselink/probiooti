@@ -27,9 +27,11 @@ namespace Antibiooti.Forum2016
 
                 new Light(ConsoleColor.White,false),
                 new Light(ConsoleColor.White,false),
+                new Light(ConsoleColor.White,false),
+
+                new Light(ConsoleColor.White,false),
                 new Light(ConsoleColor.White,false)
             };
-            Clear();
         }
 
         // Set all lights off
