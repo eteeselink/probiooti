@@ -12,14 +12,6 @@ namespace Antibiooti.Forum2016
             Blue = ConsoleColor.Blue
         }
 
-        enum CharsExpected
-        {
-            SlashLeft = '\\',
-            SlashRight = '/',
-            BigO = 'O',
-            SmallO = 'o',
-            Dot = '.'
-        }
         const string CharsOk = "x\\/Oo.";
 
         public void WriteText(string text, List<string> color , IScreen screen){
@@ -31,23 +23,20 @@ namespace Antibiooti.Forum2016
             ConsoleColor color5 = ConsoleColor.Red;
 
             if(color==null) {
-                Console.Write("Color is null" );
+                Console.Write(color);
             }
             if(color!=null && color.Count > 0) {
-                Console.Write(color.Count);
                 for(int b=0; b<color.Count; b++) {
                     if(b==0) {
-                        Console.Write("Color read:" + color[b]);
-                        assignColor(color1, color[b]);
-                        Console.Write("Color assignColor:" + color1);
+                        color1 = assignColor(color[b]);
                     } else if (b==1) {
-                        assignColor(color2, color[b]);
+                        color2 = assignColor(color[b]);
                     } else if (b==2) {
-                        assignColor(color3, color[b]);
+                        color3 = assignColor(color[b]);
                     } else if (b==3) {
-                        assignColor(color4, color[b]);
+                        color4 = assignColor(color[b]);
                     } else if (b==4) {
-                        assignColor(color5, color[b]);
+                        color5 = assignColor(color[b]);
                     }
                 }
             }
@@ -59,31 +48,27 @@ namespace Antibiooti.Forum2016
                     } 
                 }
                         Character c = new Character();
-                        Console.Write(color1);
-                        c.WriteCharacter(20, 10, text[0], color1, screen);
+                        c.WriteCharacter(30, 10, text[0], color1, screen);
                         Character c1 = new Character();
-                        c1.WriteCharacter(20, 24, text[1], color2, screen);
+                        c1.WriteCharacter(30, 24, text[1], color2, screen);
                         Character c2 = new Character();
-                        c2.WriteCharacter(20, 38,text[2], color3, screen);
+                        c2.WriteCharacter(30, 38,text[2], color3, screen);
                         Character c3 = new Character();
-                        c3.WriteCharacter(20, 52, text[3], color4, screen);
+                        c3.WriteCharacter(30, 52, text[3], color4, screen);
                         Character c4 = new Character();
-                        c4.WriteCharacter(20, 66, text[4], color5, screen);
+                        c4.WriteCharacter(30, 66, text[4], color5, screen);
                         Console.ResetColor();
-
-              
-            //   Console.ReadKey(true);
             }
 
-        ConsoleColor assignColor(ConsoleColor c, String s) {
+        ConsoleColor assignColor(String s) {
             if (s.Equals("Red", StringComparison.CurrentCultureIgnoreCase)) {
-                c = ConsoleColor.Red;
+                return ConsoleColor.Red;
             } else if (s.Equals("Green", StringComparison.CurrentCultureIgnoreCase)) {
-               c = ConsoleColor.Green; 
-            } else if (s.ToLower().Equals("blue")) {
-               c = ConsoleColor.Blue; 
+               return ConsoleColor.Green; 
+            } else if (s.ToLower() == "blue") {
+               return ConsoleColor.Blue; 
             }
-            return c;
+            return ConsoleColor.Red;
         }
 
     }
