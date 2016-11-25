@@ -20,9 +20,10 @@ namespace Antibiooti.Forum2016
             SmallO = 'o',
             Dot = '.'
         }
+        const string CharsOk = "\\/Oo.";
 
-        public void WriteText(string text, string color , List<int> colors){
-            using(var screen = new Screen()) {
+        public void WriteText(string text, string color , List<int> colors, IScreen screen){
+        //    var screen = new Screen();
                 screen.Clear();
                 // screen.Write(10, 10, "*   *   *     *   *   *    *   *   *     *   *   *     *   *   *");
                 // screen.Write(10, 11, "  * * *         * * *        * * *         * * *         * * *  ");
@@ -32,7 +33,7 @@ namespace Antibiooti.Forum2016
           
                 foreach(char a in text){
                
-                    if(!Enum.IsDefined(typeof(CharsExpected), a)) {
+                    if(!CharsOk.Contains(a.ToString())) {
                         Console.Write("The characters must be one of these: \\, /, O, o. . ");
                     } else {
                         Character c = new Character();
@@ -47,5 +48,4 @@ namespace Antibiooti.Forum2016
             }
 
     }
-}
 }

@@ -8,6 +8,6 @@ namespace Antibiooti.Forum2016
     {
      
 
-        void WriteText(string text,  string color, List<int> colors); 
+        void WriteText(string text,  string color, List<int> colors, Screen screen); 
     }
 }

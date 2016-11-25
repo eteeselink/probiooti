@@ -42,7 +42,7 @@ namespace Antibiooti.Forum2016
             }
         }
 
-        public void WriteCharacter(int x, int y, char c, ConsoleColor col, Screen screen)
+        public void WriteCharacter(int x, int y, char c, ConsoleColor col, IScreen screen)
         {
             // TODO FIX To display the character
             SetCharacter(c);
