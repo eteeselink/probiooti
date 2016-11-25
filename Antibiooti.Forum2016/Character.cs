@@ -66,13 +66,6 @@ namespace Antibiooti.Forum2016
                 case '-':
                     lights[8].Status = true;
                     break;
-                case '|':
-                    lights[1].Status = true;
-                    lights[4].Status = true;
-                    lights[8].Status = true;
-                    lights[12].Status = true;
-                    lights[15].Status = true;
-                    break;
                 case 'o':
                     lights[3].Status = true;
                     lights[4].Status = true;
