@@ -53,7 +53,7 @@ namespace Antibiooti.Forum2016
             {
                 string filePath = ssizes[1];
                 MovieMaker mvmaker = new MovieMaker(ssizes);
-                mvmaker.buildScreenTemplates();
+//                mvmaker.buildScreenTemplates();
             }
         }
     }
