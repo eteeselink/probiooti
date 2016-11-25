@@ -2,7 +2,7 @@ using System;
 
 namespace Antibiooti.Forum2016
 {
-    class Character
+    class Character : ICharacter
     {
         //TODO sort the package structure
         private Light[] lights;
