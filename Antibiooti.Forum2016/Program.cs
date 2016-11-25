@@ -27,7 +27,7 @@ namespace Antibiooti.Forum2016
             Console.WriteLine("Enter command (T/M), characters, color and Press Enter:");
             line = Console.ReadLine();
 
-            char[] whitespace = new char[] { ' ', '\t' };
+            char[] whitespace = new char[] {','};
             string[] ssizes = line.Split(whitespace);
             Console.WriteLine("Command Type: " + ssizes[0]);
             Console.WriteLine("String:" + ssizes[1]);
