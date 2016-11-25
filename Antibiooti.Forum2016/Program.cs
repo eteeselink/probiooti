@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Antibiooti.Forum2016
 {
@@ -33,29 +34,45 @@ namespace Antibiooti.Forum2016
             line = Console.ReadLine();
 
             char[] whitespace = new char[] {','};
-            string[] ssizes = line.Split(whitespace);
+            string[] userInputArgs = line.Split(whitespace);
             
-            Console.WriteLine("Command Type: " + ssizes[0]);
-            if(ssizes.Length <= 1)
+            Console.WriteLine("Command Type: " + userInputArgs[0]);
+            if(userInputArgs.Length <= 1)
             {
                 Console.WriteLine("Incorrect argument format. Please look at the examples and try again.");
                 
             }
-            else if (ssizes[0].Equals("T"))
+            else if (userInputArgs[0].Equals("T"))
             {
-               int characterTextLength = ssizes[1].Length;
+               int characterTextLength = userInputArgs[1].Length;
                if(characterTextLength != 5)
                {
                    Console.WriteLine("Character String should be 5 characters long");
                }            
+               //Parse the colors and add it to a list, userInputArgs[2:6] 
+               List<string> colorList = new List<string>(); 
+               for(int index = 2;index < userInputArgs.Length;index++)
+               {
+                 colorList.Add(userInputArgs[index]);
+               }    
+/*               foreach(string color in colorList)
+               {
+                 Console.WriteLine("Color: " + color);
+               }       */    
                IText text = new Text();
-               text.WriteText(ssizes[1],null,screen); 
+               text.WriteText(userInputArgs[1],null,screen); 
+
             }
-            else if (ssizes[0].Equals("M")) 
+            else if (userInputArgs[0].Equals("M")) 
             {
-                string filePath = ssizes[1];
-                MovieMaker mvmaker = new MovieMaker(ssizes);
-//                mvmaker.buildScreenTemplates();
+                string filePath = userInputArgs[1];
+                MovieMaker mvmaker = new MovieMaker(userInputArgs);
+                List<ScreenTemplate> screenList = mvmaker.buildScreenTemplates();
+                foreach(ScreenTemplate cur in screenList){
+                    IText text = new Text();
+                    text.WriteText(new string(cur.getSymbols()), new List<string>(new string[] { cur.getColor().ToString() }),screen);
+                    System.Threading.Thread.Sleep(1000);
+                }
             }
         }
     }

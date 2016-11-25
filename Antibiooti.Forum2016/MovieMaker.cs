@@ -35,7 +35,8 @@ namespace Antibiooti.Forum2016
                     }
                 } else {
                     throw new Exception("Wrong input string format");
-                }       
+                }     
+                result.Add(st);  
             }
             return result;
         }
