@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Antibiooti.Forum2016
 {
-    public class Text: IText
+    class Text: IText
     {
         public enum EColors
         {
@@ -22,9 +22,10 @@ namespace Antibiooti.Forum2016
         }
         const string CharsOk = "\\/Oo.";
 
-        public void WriteText(string text, string color , List<int> colors, IScreen screen){
+        public void WriteText(string text, string color , ConsoleColor colors, IScreen screen){
         //    var screen = new Screen();
-                screen.Clear();
+        //var screen = new FakeScreen();
+                // screen.Clear();
                 // screen.Write(10, 10, "*   *   *     *   *   *    *   *   *     *   *   *     *   *   *");
                 // screen.Write(10, 11, "  * * *         * * *        * * *         * * *         * * *  ");
                 // screen.Write(10, 12, "* * * * *     * * * * *    * * * * *     * * * * *     * * * * *");

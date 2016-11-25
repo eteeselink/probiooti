@@ -4,10 +4,8 @@ using System.Collections.Generic;
 
 namespace Antibiooti.Forum2016
 {
-    public interface IText
+    interface IText
     {
-     
-
-        void WriteText(string text,  string color, List<int> colors, Screen screen); 
+        void WriteText(string text,  string color, ConsoleColor colors , IScreen screen); 
     }
 }
