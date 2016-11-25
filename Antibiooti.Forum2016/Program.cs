@@ -7,8 +7,8 @@ namespace Antibiooti.Forum2016
         public static void Main(string[] args)
         {
 
-            MovieMaker mm = new MovieMaker(args);
-            mm.buildScreenTemplates();
+           // MovieMaker mm = new MovieMaker(args);
+            //mm.buildScreenTemplates();
 
           /*  using(var screen = new Screen()) {
             using(var screen = new Screen()) {
@@ -22,15 +22,14 @@ namespace Antibiooti.Forum2016
             }
             */
             string line;
-            string commandName;
+            string commandName;  
 
             Console.WriteLine("Enter command (T/M), characters, color and Press Enter:");
             line = Console.ReadLine();
             commandName=line.Substring(0, 1).Trim();
-            Command cmd=new Command(commandName);
+            //characters=line.Substring(0, 1).Trim();
+           //  Command cmd=new Command(commandName, );   
             
-            
-            ;
         }
     }
 }
