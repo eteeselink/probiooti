@@ -20,7 +20,7 @@ namespace Antibiooti.Forum2016
             SmallO = 'o',
             Dot = '.'
         }
-        const string CharsOk = "\\/Oo.";
+        const string CharsOk = "x\\/Oo.";
 
         public void WriteText(string text, List<string> color , IScreen screen){
 
