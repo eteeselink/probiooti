@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Antibiooti.Forum2016
 {
@@ -48,8 +49,19 @@ namespace Antibiooti.Forum2016
                {
                    Console.WriteLine("Character String should be 5 characters long");
                }            
+               //Parse the colors and add it to a list, ssizes[2:6] 
+               List<string> colorList = new List<string>(); 
+               for(int index = 2;index < ssizes.Length;index++)
+               {
+                 colorList.Add(ssizes[index]);
+               }    
+/*               foreach(string color in colorList)
+               {
+                 Console.WriteLine("Color: " + color);
+               }       */    
                IText text = new Text();
                text.WriteText(ssizes[1],null,screen); 
+
             }
             else if (ssizes[0].Equals("M")) 
             {
