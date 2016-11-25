@@ -22,7 +22,7 @@ namespace Antibiooti.Forum2016
             }
             */
             string line;
-            string commandName;  
+           // string commandName;  
 
             Console.WriteLine("Enter command (T/M), characters, color and Press Enter:");
             line = Console.ReadLine();
@@ -31,8 +31,19 @@ namespace Antibiooti.Forum2016
             string[] ssizes = line.Split(whitespace);
             Console.WriteLine("Command Type: " + ssizes[0]);
             Console.WriteLine("String:" + ssizes[1]);
-            Console.WriteLine("Color:" + ssizes[2]);
-            
+           // Console.WriteLine("Color:" + ssizes[2]);
+            // Text section
+            if(ssizes[0].Equals("T"))
+            {
+
+            }
+            else if(ssizes[0].Equals("M")) // Movie Section
+            {
+               string filePath = ssizes[1];
+              MovieMaker mvmaker = new MovieMaker(ssizes);
+
+            }
+
           //  commandName=line.Substring(0, 1).Trim();
           //  characters=line.Substring(0, 1).Trim();
            //  Command cmd=new Command(commandName, );   
