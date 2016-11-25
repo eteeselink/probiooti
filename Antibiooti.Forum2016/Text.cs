@@ -69,6 +69,8 @@ namespace Antibiooti.Forum2016
                         c3.WriteCharacter(20, 52, text[3], color4, screen);
                         Character c4 = new Character();
                         c4.WriteCharacter(20, 66, text[4], color5, screen);
+                        Console.ResetColor();
+
               
             //   Console.ReadKey(true);
             }
