@@ -67,7 +67,12 @@ namespace Antibiooti.Forum2016
             {
                 string filePath = userInputArgs[1];
                 MovieMaker mvmaker = new MovieMaker(userInputArgs);
-//                mvmaker.buildScreenTemplates();
+                List<ScreenTemplate> screenList = mvmaker.buildScreenTemplates();
+                foreach(ScreenTemplate cur in screenList){
+                    IText text = new Text();
+                    text.WriteText(new string(cur.getSymbols()), new List<string>(new string[] { cur.getColor().ToString() }),screen);
+                    System.Threading.Thread.Sleep(1000);
+                }
             }
         }
     }
