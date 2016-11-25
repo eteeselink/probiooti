@@ -104,6 +104,17 @@ namespace Antibiooti.Forum2016
                     lights[11].Status = true;
                     lights[14].Status = true;
                     break;
+                case 'x':
+                    lights[0].Status = true;
+                    lights[2].Status = true;
+                    lights[3].Status = true;
+                    lights[5].Status = true;
+                    lights[8].Status = true;
+                    lights[11].Status = true;
+                    lights[13].Status = true;
+                    lights[14].Status = true;
+                    lights[16].Status = true;
+                    break;
                 default:
                     break;
             }        
