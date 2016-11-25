@@ -1,4 +1,3 @@
-Oo/-.1
--.///5
-ooO--3
-
+Oo/-. black
+-./// red
+ooO-- yellow
