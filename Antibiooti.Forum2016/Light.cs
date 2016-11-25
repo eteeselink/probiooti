@@ -57,5 +57,15 @@ namespace Antibiooti.Forum2016
             this._color = color;
             this._status = status;
         }
+
+        
+        /// <summary>
+        /// Initializes a new instance of the Light class with no parameters.
+        /// </summary>
+        public Light()
+        {
+            this._color = ConsoleColor.White;
+            this._status = false;
+        }
     }
 }
