@@ -23,37 +23,35 @@ namespace Antibiooti.Forum2016
         const string CharsOk = "\\/Oo.";
 
         public void WriteText(string text, List<string> color , IScreen screen){
-        //    var screen = new Screen();
-        //var screen = new FakeScreen();
-                // screen.Clear();
-                // screen.Write(10, 10, "*   *   *     *   *   *    *   *   *     *   *   *     *   *   *");
-                // screen.Write(10, 11, "  * * *         * * *        * * *         * * *         * * *  ");
-                // screen.Write(10, 12, "* * * * *     * * * * *    * * * * *     * * * * *     * * * * *");
-                // screen.Write(10, 13, "  * * *         * * *        * * *         * * *         * * *  ");
-                // screen.Write(10, 14, "*   *   *     *   *   *    *   *   *     *   *   *     *   *   *");
-          
-                // if(colo)
-                // foreach(string s incolor)
+
+            ConsoleColor color1 = ConsoleColor.Red;
+            ConsoleColor color2 = ConsoleColor.Red;
+            ConsoleColor color3 = ConsoleColor.Red;
+            ConsoleColor color4 = ConsoleColor.Red;
+            ConsoleColor color5 = ConsoleColor.Red;
+
+            if(color!=null && color.Count > 0) {
+                foreach(string s in color) {
+                    
+                }
+            }
+            
                 foreach(char a in text){
                
                     if(!CharsOk.Contains(a.ToString())) {
                         Console.Write("The characters must be one of these: \\, /, O, o. . ");
-                    } else {
+                    } 
+                }
                         Character c = new Character();
-                        // if (text[0] == a) {
-                        c.WriteCharacter(20, 10, text[0], ConsoleColor.Red, screen);
+                        c.WriteCharacter(20, 10, text[0], color1, screen);
                         Character c1 = new Character();
-                        c1.WriteCharacter(20, 20, text[1], ConsoleColor.Red, screen);
-
+                        c1.WriteCharacter(20, 24, text[1], color2, screen);
                         Character c2 = new Character();
-                        c2.WriteCharacter(20, 33,text[2], ConsoleColor.Red, screen);
+                        c2.WriteCharacter(20, 38,text[2], color3, screen);
                         Character c3 = new Character();
-                        c3.WriteCharacter(20, 44, text[3], ConsoleColor.Red, screen);
+                        c3.WriteCharacter(20, 52, text[3], color4, screen);
                         Character c4 = new Character();
-                        c4.WriteCharacter(20, 55, text[4], ConsoleColor.Red, screen);
-                    }
-
-                }       
+                        c4.WriteCharacter(20, 66, text[4], color5, screen);
               
             //   Console.ReadKey(true);
             }
