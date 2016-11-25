@@ -1,15 +1,36 @@
 using System;
 
-namespace Character
+namespace Antibiooti.Forum2016
 {
     class Character
     {
         //TODO sort the package structure
-        private Light[15] lights;
+        private Light[] lights;
 
-        public FakeScreen() {
+        public Character() {
+            lights = new Light[]{
+                new Light(ConsoleColor.White,true),
+                new Light(ConsoleColor.White,true),
+                new Light(ConsoleColor.White,true),
+
+                new Light(ConsoleColor.White,true),
+                new Light(ConsoleColor.White,true),
+                new Light(ConsoleColor.White,true),
+
+                new Light(ConsoleColor.White,true),
+                new Light(ConsoleColor.White,true),
+                new Light(ConsoleColor.White,true),
+
+                new Light(ConsoleColor.White,true),
+                new Light(ConsoleColor.White,true),
+                new Light(ConsoleColor.White,true),
+
+                new Light(ConsoleColor.White,true),
+                new Light(ConsoleColor.White,true),
+                new Light(ConsoleColor.White,true)
+            }
             Clear();
-        }
+        };
 
         public void Clear()
         {
@@ -20,11 +41,25 @@ namespace Character
         {
             // TODO FIX To display the character
 
-                screen.Write(y, x, "*   *   *");
-                screen.Write(y, x+1, "  * * *  ");
-                screen.Write(y, x+2, "* * * * *");
-                screen.Write(y, x+3, "  * * *  ");
-                screen.Write(y, x+4, "*   *   *")<
+            var line = "";
+            char pixel;
+            if(light[0].on) {
+                pixel = '*';
+            }
+            else {
+                pixel = ' ';
+            }
+
+
+            using(var screen = new Screen()) {
+                screen.Clear();
+                screen.Write(y, x, lights[0].getChar()+"   "+lights[1].getChar()+"   " + lights[2].getChar());
+                screen.Write(y, x+1, "  "+lights[3].getChar()+" "+lights[4].getChar()+" "+lights[5].getChar()+"  ");
+                screen.Write(y, x+2, lights[6].getChar()+" "+lights[7].getChar()+" "+lights[8].getChar()+" "+lights[9].getChar()+" "+lights[10].getChar());
+                screen.Write(y, x+3, "  "+lights[11].getChar()+" "+lights[12].getChar()+" "+lights[13].getChar()+"  ");
+                screen.Write(y, x+4, lights[14].getChar()+"   "+lights[15].getChar()+"   "+lights[16].getChar());
+                Console.ReadKey(true);
+            }
         }
 
         public void SetCharacter(char c)
