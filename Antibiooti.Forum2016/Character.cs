@@ -32,6 +32,7 @@ namespace Antibiooti.Forum2016
             Clear();
         }
 
+        // Set all lights off
         public void Clear()
         {
             for (int i=0;i<17;i++){
@@ -39,12 +40,13 @@ namespace Antibiooti.Forum2016
             }
         }
 
-        public void Write(int x, int y)
+        public void Write(int x, int y, char c, ConsoleColor col)
         {
             // TODO FIX To display the character
-
+            SetCharacter(c);
+            SetCharacterColor(col);
             using(var screen = new Screen()) {
-                screen.Clear();
+                screen.Clear(); // maybe futre problem
                 screen.Write(y, x, lights[0].getChar()+"   "+lights[1].getChar()+"   " + lights[2].getChar());
                 screen.Write(y, x+1, "  "+lights[3].getChar()+" "+lights[4].getChar()+" "+lights[5].getChar()+"  ");
                 screen.Write(y, x+2, lights[6].getChar()+" "+lights[7].getChar()+" "+lights[8].getChar()+" "+lights[9].getChar()+" "+lights[10].getChar());
@@ -109,7 +111,7 @@ namespace Antibiooti.Forum2016
             }        
         }
 
-        public void SetLightColor(int n, ConsoleColor color)
+        public void SetCharacterColor(ConsoleColor color)
         {
             // To set the color of a specific light
             for (int i=0;i<17;i++){
