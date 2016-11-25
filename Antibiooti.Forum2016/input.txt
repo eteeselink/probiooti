@@ -1,3 +1,16 @@
 Oo/-. black
 -./// red
 ooO-- yellow
+xoOx- green
+oOx-x yellow
+ooO-- yellow
+xoOx- green
+oOx-x yellow
+Oo/-. black
+-./// red
+ooO-- yellow
+xoOx- green
+oOx-x yellow
+ooO-- yellow
+xoOx- green
+oOx-x yellow
