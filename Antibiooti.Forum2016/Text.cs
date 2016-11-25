@@ -17,9 +17,9 @@ namespace Antibiooti.Forum2016
         public void WriteText(string text, List<string> color , IScreen screen){
 
             ConsoleColor color1 = ConsoleColor.Red;
-            ConsoleColor color2 = ConsoleColor.Green;
+            ConsoleColor color2 = ConsoleColor.Red;
             ConsoleColor color3 = ConsoleColor.Red;
-            ConsoleColor color4 = ConsoleColor.Yellow;
+            ConsoleColor color4 = ConsoleColor.Red;
             ConsoleColor color5 = ConsoleColor.Red;
 
             if(color==null) {
