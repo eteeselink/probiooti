@@ -34,39 +34,39 @@ namespace Antibiooti.Forum2016
             line = Console.ReadLine();
 
             char[] whitespace = new char[] {','};
-            string[] ssizes = line.Split(whitespace);
+            string[] userInputArgs = line.Split(whitespace);
             
-            Console.WriteLine("Command Type: " + ssizes[0]);
-            if(ssizes.Length <= 1)
+            Console.WriteLine("Command Type: " + userInputArgs[0]);
+            if(userInputArgs.Length <= 1)
             {
                 Console.WriteLine("Incorrect argument format. Please look at the examples and try again.");
                 
             }
-            else if (ssizes[0].Equals("T"))
+            else if (userInputArgs[0].Equals("T"))
             {
-               int characterTextLength = ssizes[1].Length;
+               int characterTextLength = userInputArgs[1].Length;
                if(characterTextLength != 5)
                {
                    Console.WriteLine("Character String should be 5 characters long");
                }            
-               //Parse the colors and add it to a list, ssizes[2:6] 
+               //Parse the colors and add it to a list, userInputArgs[2:6] 
                List<string> colorList = new List<string>(); 
-               for(int index = 2;index < ssizes.Length;index++)
+               for(int index = 2;index < userInputArgs.Length;index++)
                {
-                 colorList.Add(ssizes[index]);
+                 colorList.Add(userInputArgs[index]);
                }    
 /*               foreach(string color in colorList)
                {
                  Console.WriteLine("Color: " + color);
                }       */    
                IText text = new Text();
-               text.WriteText(ssizes[1],null,screen); 
+               text.WriteText(userInputArgs[1],null,screen); 
 
             }
-            else if (ssizes[0].Equals("M")) 
+            else if (userInputArgs[0].Equals("M")) 
             {
-                string filePath = ssizes[1];
-                MovieMaker mvmaker = new MovieMaker(ssizes);
+                string filePath = userInputArgs[1];
+                MovieMaker mvmaker = new MovieMaker(userInputArgs);
 //                mvmaker.buildScreenTemplates();
             }
         }
