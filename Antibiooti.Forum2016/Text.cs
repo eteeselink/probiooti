@@ -47,15 +47,15 @@ namespace Antibiooti.Forum2016
                     } 
                 }
                         Character c = new Character();
-                        c.WriteCharacter(5, 10, text[0], color1, screen);
+                        c.WriteCharacter(25, 10, text[0], color1, screen);
                         Character c1 = new Character();
-                        c1.WriteCharacter(5, 24, text[1], color2, screen);
+                        c1.WriteCharacter(25, 24, text[1], color2, screen);
                         Character c2 = new Character();
-                        c2.WriteCharacter(5, 38,text[2], color3, screen);
+                        c2.WriteCharacter(25, 38,text[2], color3, screen);
                         Character c3 = new Character();
-                        c3.WriteCharacter(5, 52, text[3], color4, screen);
+                        c3.WriteCharacter(25, 52, text[3], color4, screen);
                         Character c4 = new Character();
-                        c4.WriteCharacter(5, 66, text[4], color5, screen);
+                        c4.WriteCharacter(25, 66, text[4], color5, screen);
                         Console.ResetColor();
             }
 
