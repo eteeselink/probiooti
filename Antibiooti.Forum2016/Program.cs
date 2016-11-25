@@ -27,34 +27,34 @@ namespace Antibiooti.Forum2016
             Console.WriteLine("Syntax for commandline can be one of the two");
             Console.WriteLine("1. <T>,<5-character string>,<5-color strings(one per light)");
             Console.WriteLine("2. <M>,<FilePath>");
-            Console.WriteLine("For example");
+            Console.WriteLine("For example::");
             Console.WriteLine("T,0o.0o,blue,red,green,blue,red");
             Console.WriteLine("M,D:\\Continuous Integration\\movie.txt");
             line = Console.ReadLine();
 
             char[] whitespace = new char[] {','};
             string[] ssizes = line.Split(whitespace);
-            Console.WriteLine("Command Type: " + ssizes[0]);
-            Console.WriteLine("String:" + ssizes[1]);
-           // Console.WriteLine("Color:" + ssizes[2]);
-            // Text section
-            if(ssizes[0].Equals("T"))
-            {
-
-            }
-            else if(ssizes[0].Equals("M")) // Movie Section
-            {
-               string filePath = ssizes[1];
-              MovieMaker mvmaker = new MovieMaker(ssizes);
-
-            }
-
-          //  commandName=line.Substring(0, 1).Trim();
-          //  characters=line.Substring(0, 1).Trim();
-           //  Command cmd=new Command(commandName, );   
-
-
             
+            Console.WriteLine("Command Type: " + ssizes[0]);
+            if(ssizes.Length <= 1)
+            {
+                Console.WriteLine("Incorrect argument format. Please look at the examples and try again.");
+                
+            }
+            else if (ssizes[0].Equals("T"))
+            {
+               int characterTextLength = ssizes[1].Length;
+               if(characterTextLength != 5)
+               {
+                   Console.WriteLine("Character String should be 5 characters long");
+               }              
+            }
+            else if (ssizes[0].Equals("M")) 
+            {
+                string filePath = ssizes[1];
+                MovieMaker mvmaker = new MovieMaker(ssizes);
+//                mvmaker.buildScreenTemplates();
+            }
         }
     }
 }
