@@ -28,9 +28,9 @@ namespace Antibiooti.Forum2016
                 new Light(ConsoleColor.White,true),
                 new Light(ConsoleColor.White,true),
                 new Light(ConsoleColor.White,true)
-            }
+            };
             Clear();
-        };
+        }
 
         public void Clear()
         {
@@ -40,16 +40,6 @@ namespace Antibiooti.Forum2016
         public void Write(int x, int y)
         {
             // TODO FIX To display the character
-
-            var line = "";
-            char pixel;
-            if(light[0].on) {
-                pixel = '*';
-            }
-            else {
-                pixel = ' ';
-            }
-
 
             using(var screen = new Screen()) {
                 screen.Clear();
