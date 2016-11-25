@@ -40,6 +40,9 @@ namespace Antibiooti.Forum2016
             }
         }
 
+        /// <summary>
+        /// Returning a char depending on the status.
+        /// </summary>
         public char getChar(){
             if(_status) {
                 return '*';
